@@ -1,0 +1,102 @@
+<body>
+  
+
+  <div class="conta">
+    <div class="title">Add New Doctor <a href="home/(home:doctor-list-page)" style="margin-left: 400px; text-decoration: none;">Go Back⬅</a> </div>
+    <div class="content">
+      <form action="#"   name="form" #f="ngForm"  (ngSubmit)="f.form.valid && submit()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Name</span>
+            <input type="text" placeholder="Enter your name" required  name="name" [(ngModel)]="formData.name" required class="form-control" #name="ngModel"  [ngClass]="{'is-invalid':f.submitted && name.invalid , 'is-valid':f.submitted && name.valid}" >
+            <div class="invalid-feedback">
+              <div>Name is required</div>
+            </div>
+          </div>
+       
+          
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input type="text"
+                   id="email"
+                   name="emailId"
+                   placeholder="Enter your email"
+                   required
+                   [(ngModel)]="formData.emailId"
+                   class="form-control"
+                   #email="ngModel"
+                   [ngClass]="{'is-invalid': f.submitted && email.invalid, 'is-valid': f.submitted && email.valid}"
+                   pattern="^[a-zA-Z0-9._%+-]+@\.com$">
+            <div class="invalid-feedback" *ngIf="f.submitted && email.invalid">
+              <div *ngIf="email.errors?.['required']">Email is required & email must contain  &#64;</div>
+              <div *ngIf="email.errors?.['pattern']">Email must be in the format ani&#64;.com</div>
+            </div>
+          </div>
+
+        <div class="input-box">
+          <label for="phone">Mobile Number</label>
+          <input type="text"
+                 id="phone"
+                 name="phone"
+                 placeholder="Enter the Mobile"
+                 required
+                 [(ngModel)]="formData.phone"
+                 class="form-control"
+                 #mobile="ngModel"
+                 [ngClass]="{'is-invalid': f.submitted && mobile.invalid, 'is-valid': f.submitted && mobile.valid}"
+                 pattern="^\d{10}$"
+                 maxlength="10">
+          <div class="invalid-feedback" *ngIf="f.submitted && mobile.invalid">
+            <div *ngIf="mobile.errors?.['required']">Mobile is required</div>
+            <div *ngIf="mobile.errors?.['pattern']">Mobile number must be exactly 10 digits</div>
+          </div>
+        </div>
+          <div class="input-box">
+            <span class="details">Date-Of-Birth</span>
+            <input type="date" placeholder="Enter Date Of Birth" required   name="dob" [(ngModel)]="formData.dob"  class="form-control"  #dob="ngModel"  [ngClass]="{'is-invalid':f.submitted && dob.invalid , 'is-valid':f.submitted && dob.valid}">
+            <div class="invalid-feedback">
+              <div>Date of birth is required</div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Liscence No</span>
+            <input type="text" placeholder="Enter The Liscence no" required  name="liscenseno" [(ngModel)]="formData.liscenseno"   class="form-control" #lis="ngModel"  [ngClass]="{'is-invalid':f.submitted && lis.invalid , 'is-valid':f.submitted && lis.valid}">
+            <div class="invalid-feedback">
+              <div>Liscence is required</div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" placeholder="Enter the Specialization" required  name="address" [(ngModel)]="formData.address"  class="form-control" #address="ngModel"  [ngClass]="{'is-invalid':f.submitted && address.invalid , 'is-valid':f.submitted && address.valid}">
+            <div class="invalid-feedback">
+              <div>Address is required</div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Specialization</span>
+            <input type="text" placeholder="Enter the Specialization" required name="specialization" [(ngModel)]="formData.specialization" class="form-control"  #special="ngModel"  [ngClass]="{'is-invalid':f.submitted && special.invalid ,'is-valid':f.submitted && special.valid}">
+            <div class="invalid-feedback">
+              <div>Specialization is required</div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter the Password" required name="specialization" [(ngModel)]="formData.password" class="form-control"  #password="ngModel"  [ngClass]="{'is-invalid':f.submitted && password.invalid , 'is-valid':f.submitted && password.valid}">
+            <div class="invalid-feedback">
+              <div>Password is required</div>
+            </div>
+          </div>
+        </div>
+      
+       
+        <div class="button">
+          <input type="submit" value="Add New Doctors" (click)="createDoctor()  ">
+        </div>
+        <div class="button">
+          <input type="submit" value="Add Doctors Consultation" (click)="Doctorconsult()  ">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+

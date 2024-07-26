@@ -1,0 +1,160 @@
+
+.container {
+    // border: 1px solid lightcoral;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-section {
+    flex:.5;
+    // border: 1px solid lightcoral;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    padding: 10px;
+    color: white;
+}
+
+.title {
+    box-sizing: border-box;
+    font-size: 23px;
+    margin-top: 24px;
+    font-weight: bolder;
+    text-transform: capitalize;
+    letter-spacing: 4px;
+
+}
+
+.body-section {
+    
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#C0D6E8;
+
+}
+
+.search-section {
+    flex: 2;
+    // border: 1px solid lightcoral;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5px;
+}
+
+
+.left-side-search-section {
+    flex:3;
+    // border: 1px solid lightcoral;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+.right-side-search-section {
+    flex:1;
+    // border: 1px solid lightcoral;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.content-section {
+
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
+}
+
+/* Style the table */
+table {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the table header */
+th {
+    box-sizing: border-box;
+    background-color: #3983fe;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Style the table rows */
+tr:nth-child(even) {
+    box-sizing: border-box;
+
+    background-color: #f2f2f2;
+}
+
+/* Style table cells */
+td {
+    box-sizing: border-box;
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Style actions column */
+.actions {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Style hover effect */
+tr:hover {
+    background-color: #ddd;
+}
+
+.footer-section {
+    flex: .5;
+    // border: 1px solid lightcoral;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+.actions button{
+    background:#3983fe;
+    color: white;
+    border-radius: 9px;
+    border: 1px solid white;
+    height: 35px;
+    width: 60px;
+
+}

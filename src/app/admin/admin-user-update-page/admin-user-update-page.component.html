@@ -1,0 +1,50 @@
+<div class="body">
+<div class="container">
+    <div class="header-section">
+      <div class="title">Update Administrator</div>
+      <button class="btn" (click)="backtoadminlist()">Back</button>
+
+    </div>
+  
+    <div class="body-section">
+      <div class="search-section">
+        <div class="side-search-section">
+          <div class="name">
+            <label>Name:</label>
+            <input type="text" id="name" [(ngModel)]="admins.name" name="name" >
+          </div>
+  
+          <div class="DOB">
+            <label>DOB:</label>
+            <input type="date" id="dob" [(ngModel)]="admins.dob" name="dob" >
+          </div>
+          <div class="address">
+            <label>Address:</label>
+            <input type="text" id="address" [(ngModel)]="admins.address" name="address" >
+          </div>
+        </div>
+  
+        <div class="side-search-section">
+          <div class="emailId">
+            <label>Email:</label>
+            <input type="email" id="email" [(ngModel)]="admins.emailId" name="email" >
+          </div>
+  
+          <div class="phone">
+            <label>Phone no:</label>
+            <input type="text" id="phone" [(ngModel)]="admins.phone" name="phone">
+          </div>
+        </div>
+      </div>
+  
+      <div class="content-section">
+        <button class="create-btn" (click)="updateAdmin(admins.id)" >Update   Admin   Details</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="foot" style="height: 198px;">
+  <p>.</p>
+  
+</div>
+  

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="header-section">
+    <div class="title">Create Consultation For Doctor</div>
+  </div>
+  <main class="table">
+    <div class="table-container">
+      <section class="table-body">
+        <table>
+          <thead class="head"> 
+            <tr>
+              <th><input class="docId" placeholder="Doc Id" readonly></th>
+              <th><input class="docname" placeholder="Doctor Name" readonly></th>
+              <th><input class="id-day" placeholder="Day" readonly></th>
+              <th><input class="id-session" placeholder="Session" readonly></th>
+              <th><input class="id-st" placeholder="Start" readonly></th>
+              <th><input class="id-et" placeholder="End" readonly></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of formData">
+              <td><input class="id" type="text" [(ngModel)]="item.doctor"></td>
+              <td><input class="doctor" type="text" [(ngModel)]="item.name"></td>
+              <td><input class="day" type="text" [(ngModel)]="item.day" readonly></td>
+              <td><input class="session" type="text" [(ngModel)]="item.session"></td>
+              <td><input class="st-time" type="time" [(ngModel)]="item.startingtime"></td>
+              <td><input class="et-time" type="time" [(ngModel)]="item.endingtime"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </main>
+  <button class="consultation-btn" (click)="onsubmit()">Submit</button>
+</div>

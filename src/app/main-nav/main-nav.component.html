@@ -1,0 +1,43 @@
+<div class="contain">
+    <div class="nav-section">
+      <div class="nav-header-section">
+        <div class="title" style="color: #ffffff  ; font-size: 24px;">
+  
+          <img src="./assets/images/hos.jpg" alt="" style="height:50px; width: 100px; border-radius: 50px;"><b style="padding-left: 18px; ">WELCOME ADMIN</b><a href="admin-login"><img src="./assets/images/goout.png"  alt="" style="height:40px; width: 80px; margin-left: 10px;"></a>
+        </div>
+      </div>
+      <div class="nav-menu-section">
+        <div class="menu-item" (click)="onMenu(1)" [class.selected-menu]="menuSelected == 1" >
+          <div class="menu-name"  >  <img src="./assets/images/admin.webp" alt="" style="height:30px; width: 30px;"><b>ADMIN USERS</b> <b style="margin-left: 200px;">➡</b></div>
+        </div>
+  
+        <div class="menu-item" (click)="onMenu(2)" [class.selected-menu]="menuSelected == 2">
+          <div class="menu-name" > <img src="./assets/images/doctor.webp" alt="" style="height:30px; width: 30px;"><b>DOCTOR</b><b style="margin-left: 250px;">➡</b></div>
+        </div>
+  
+        <div class="menu-item" (click)="onMenu(3)" [class.selected-menu]="menuSelected == 3">
+          <div class="menu-name" > <img src="./assets/images/patient.webp" alt="" style="height:30px; width: 30px; "><b>SUBSCRIBERS</b><b style="margin-left: 200px;">➡</b></div>
+        </div>
+        <div class="menu-item" (click)="onMenu(4)" [class.selected-menu]="menuSelected == 3">
+          <div class="menu-name" > <img src="./assets/images/book.png" alt="" style="height:30px; width: 30px; "><b>APPOINTMENTS</b><b style="margin-left: 180px;">➡</b></div>
+        </div>
+  
+  
+       
+        <img src="./assets/images/hospital.jpg" alt="" style="height: 200px; width: 450px;">
+  
+  
+        <!-- @for (item of menus; track item.id ) {
+          <div class="menu-item">
+            <div class="menu-name">Place holder for new menu</div>
+          </div>
+        } -->
+      </div>
+      </div>
+  
+   
+    <div class="main-section">
+      <router-outlet name="home"></router-outlet>
+    </div>
+  </div>
+  

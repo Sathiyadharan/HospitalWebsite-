@@ -1,0 +1,109 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.body{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(to bottom,#7EA1FF 0%,#7EA1FF 50% , #B3C8CF 50% ,#B3C8CF 100%);
+  height: 100vh;
+
+
+}
+.container{
+  position:absolute;
+  top: 45%;
+  left: 65%;
+  transform: translate(-50%,-50%);
+  max-width: 500px;
+  width: 100%;
+  background:linear-gradient(57deg, #C0D6E8 50% , #3983fe 30%);
+  border-radius: 7px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+
+
+}
+.container .registration{
+  display: none;
+}
+#check:checked ~ .registration{
+  display: block;
+}
+#check:checked ~ .login{
+  display: none;
+}
+#check{
+  display: none;
+}
+.container .form{
+  padding: 2rem;
+}
+.form header{
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+ .form input{
+   height: 55px;
+   width: 100%;
+   padding: 0 15px;
+   font-size: 17px;
+   margin-bottom: 1.3rem;
+   border: 1px solid #ddd;
+   border-radius: 6px;
+   outline: none;
+ }
+ .form input:focus{
+   box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+ }
+.form a{
+  font-size: 16px;
+  color:#3983fe;
+  text-decoration: none;
+}
+.form a:hover{
+  text-decoration: underline;
+}
+
+.signup{
+  font-size: 17px;
+  text-align: center;
+}
+.signup h4{
+  color:black;
+ 
+}
+.signup a{
+    color:#3983fe;
+    font-size: larger;
+    cursor:pointer;
+}
+
+.signup label:hover{
+  text-decoration: underline;
+}
+h4{
+  text-align-last:left;
+  text-shadow:2px 2px 2px  black;
+}
+
+button{
+  margin-top: 30px;
+  margin-left: 20%;
+  width: 60%;
+  font-size: 20px;
+  background:#2165d1;
+  border-radius: 15px;
+  border: 1px solid white;
+  color: white;
+ 
+}
+button:hover{
+  font-size: 24px;
+  background:#225cb9;
+}

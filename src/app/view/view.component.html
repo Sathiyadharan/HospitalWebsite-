@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="header-section">
+    <div class="title">Consultation Timings for {{ doctorName }}</div>
+  </div>
+  <main class="table">
+    <div class="table-container">
+      <section class="table-body">
+        <form #consultationForm="ngForm">
+          <table>
+            <thead class="head">
+              <tr>
+                <th>Day</th>
+                <th>Session</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Doctor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of formData; let i = index">
+                <td>
+                  <input type="text" name="day-{{i}}" [(ngModel)]="item.day" required>
+                </td> 
+                <td>
+                  <input type="text" name="session-{{i}}" [(ngModel)]="item.session" required>
+                </td>
+                <td>
+                  <input type="time" name="startingtime-{{i}}" [(ngModel)]="item.startingtime" required>
+                </td>
+                <td>
+                  <input type="time" name="endingtime-{{i}}" [(ngModel)]="item.endingtime" required>
+                </td>
+                <td>
+                  <input type="text" name="doctor-{{i}}" [(ngModel)]="item.doctor" required>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" (click)="updateConsultations()">Update Consultations</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</div>

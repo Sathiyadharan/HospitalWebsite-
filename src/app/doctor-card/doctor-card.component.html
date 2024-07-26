@@ -1,0 +1,26 @@
+<div class="main-container">
+  <!-- Assume your navbar is already here -->
+  <div class="content">
+    <div class="container">
+      <div class="left-side-search-section">
+        <div class="emailId-search">
+            <mat-form-field class="mat-emailId-search">
+                <mat-label style="color: black;">Search</mat-label>
+                <input matInput [(ngModel)]="searchtext" placeholder="type here" />
+            </mat-form-field>
+        </div>
+      <p class="card-text">Doctors</p>
+      <div class="row">
+        <div class="card" *ngFor="let doctor of doctors   | filter:searchtext; trackBy: trackById">
+          <div>
+            <h2>{{ doctor.name }}</h2>
+          </div>
+          <div>
+            <p>{{ doctor.specialization }}</p>
+          </div>
+          <button (click)="onEditdoctor(doctor.id)">Book Appointment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

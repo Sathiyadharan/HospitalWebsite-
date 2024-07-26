@@ -1,0 +1,23 @@
+<h1>toggle</h1>
+<br>
+
+<mat-accordion >
+    <mat-expansion-panel hideToggle   style="width:200px;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Add Doctor
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button style="width: 150px; height: 30px;">Add</button>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false" style="width: 200px;">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Add Patient
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <button style="width: 150px; height: 30px;">Add</button>
+    </mat-expansion-panel>
+  </mat-accordion>
+  

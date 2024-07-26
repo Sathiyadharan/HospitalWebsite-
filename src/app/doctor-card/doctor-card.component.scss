@@ -1,0 +1,87 @@
+/* Main container to hold navbar and content */
+.main-container {
+    display: flex;
+    height: 98vh;
+    overflow: hidden;
+  }
+  
+  /* Styling for the content area to be scrollable */
+  .content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the entire card */
+  .container {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Style for the paragraph containing the "Doctors" title */
+  .card-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Container for each row of doctor information */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
+  
+  /* Container for each doctor's information, now taking up half the row */
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the doctor's name */
+  h2 {
+    font-size: 20px;
+    color: #2a9d8f;
+    margin: 0 0 10px;
+  }
+  
+  /* Style for the doctor's specialization */
+  p {
+    font-size: 16px;
+    color: #555;
+    margin: 0 0 10px;
+  }
+  
+  /* Style for the "Book Appointment" button */
+  button {
+    background-color:#3983fe;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color:#336ece;
+  }
+  
+  /* Ensure the last row's items are properly aligned even if they are not complete */
+  .row::after {
+    content: "";
+    flex: auto;
+  }
+  

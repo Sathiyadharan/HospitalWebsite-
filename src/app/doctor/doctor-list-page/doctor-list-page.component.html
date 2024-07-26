@@ -1,0 +1,71 @@
+<!-- doctor-list-page.component.html -->
+<div class="contai">
+  <div class="header-section" style="background-color: #3983fe;">
+      <div class="title">DOCTORS LIST</div>
+  </div>
+
+  <div class="body-section">
+      <div class="search-section">
+          <div class="left-side-search-section">
+              <div class="emailId-search">
+                  <mat-form-field class="mat-emailId-search">
+                      <mat-label style="color: black;">Search</mat-label>
+                      <input matInput [(ngModel)]="searchtext" placeholder="type here" />
+                  </mat-form-field>
+              </div>
+
+          </div>
+          <div style="margin-right:100px;">
+              <img src="./assets/images/gro.png.png" alt="" style="height:100px; width: 300px;">
+              <hr style="color: #3983fe; size: 19px;">
+          </div>
+          <div class="right-side-search-section">
+              <button mat-raised-button color="primary" (click)="onAddAdminUser()" style="background-color: #3983fe; width: 200px;">Add Doctor</button>
+        
+          </div>
+
+      </div>
+
+      <div class="content-section">
+          <table>
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>Email ID</th>
+                      <th>Mobile No</th>
+                      <th>Date of Birth</th>
+                      <th>Address</th>
+                      <th>Liscense NO</th>
+                      <th>Specialization</th>
+                      <th>consult time</th>
+                      
+                      
+                  
+                      <th class="actions">Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let doctor of doctors | filter:searchtext; trackBy: trackById">
+                      <td>{{ doctor.id }}</td>
+                      <td>{{ doctor.name }}</td>
+                      <td>{{ doctor.emailId }}</td>
+                      <td>{{ doctor.phone }}</td>
+                      <td>{{ doctor.dob }}</td>
+                      <td>{{ doctor.address }}</td>
+                      <td>{{doctor.liscenseno}}</td>
+                      <td>{{doctor.specialization}}</td>
+                      <td class="consult">
+                        <button style="background-color: #3983fe; color: white; height: 28px; width: 50px; border: 1px solid white; border-radius: 10px;" (click)="onview(doctor.id)" >Edit</button>
+                      </td>
+                      
+                     
+                      <td class="actions">
+                        <button (click)="onEditdoctor(doctor.id)">Edit</button>
+                      </td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="column">
+      <h2>Selected Patient</h2>
+      <div class="table" id="one">
+        <div class="row" >
+          <label>Name:</label>
+          <input type="text" [(ngModel)]="patientData.name" readonly>
+        </div>
+        <div class="row">
+          <label>Age:</label>
+          <input type="text" [(ngModel)]="patientData.dob" readonly>
+        </div>
+        <div class="row">
+          <label>Email:</label>
+          <input type="email" [(ngModel)]="patientData.emailId" readonly>
+        </div>
+        <div class="row">
+          <label>Phone:</label>
+          <input type="text" [(ngModel)]="patientData.phone" readonly>
+        </div>
+        <div class="row">
+          <label>Address:</label>
+          <input type="text" [(ngModel)]="patientData.address" readonly>
+        </div>
+      </div>
+      <div class="time">
+        <h3 style="font-weight: 900;">Enter the Time</h3>
+        <input type="time" style="width: 150px;">
+      </div>
+      <div class="date">
+        <h3 style="font-weight: 900;">Enter the Date</h3>
+        <input type="date" style="width: 160px;">
+      </div>
+    </div>
+  
+    <div class="divider"></div>
+  
+    <div class="column">
+      <h2>Selected Doctor</h2>
+      <div class="table">
+        <div class="row">
+          <label>Name:</label>
+          <input type="text" [(ngModel)]="formData.name" readonly>
+        </div>
+        <div class="row">
+          <label>Specialization:</label>
+          <input type="text" [(ngModel)]="formData.specialization" readonly>
+        </div>
+        <div class="row">
+          <label>Email:</label>
+          <input type="email" [(ngModel)]="formData.emailId" readonly>
+        </div>
+      </div>
+      <div class="button">
+        <button>Book</button>
+      </div>
+      <div class="date">
+        
+    </div>
+    </div>
+    
+  </div>
+ 
+  

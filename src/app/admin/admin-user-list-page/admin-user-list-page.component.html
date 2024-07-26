@@ -1,0 +1,62 @@
+<div class="contain">
+  
+  <div class="header-section" style="background-color: #3983fe;">
+    <div class="title">ADMINS LIST</div>
+  </div>
+
+  <div class="body-section">
+    <div class="search-section">
+      <div class="left-side-search-section">
+        <div class="emailId-search">
+          <mat-form-field class="mat-emailId-search">
+            <mat-label style="color: black;">Search</mat-label>
+            <input matInput  [(ngModel)]="searchtext" placeholder="type here" />
+          </mat-form-field>
+        </div>
+
+        
+      </div>
+      <div style="margin-right: 200px;">
+        <img src="./assets/images/admin.webp" alt="" style="height:100px; width: 100px;">
+        <hr style="color: #3983fe; size: 19px;">
+      </div>
+      <div class="right-side-search-section">
+        <button mat-raised-button color="primary" (click)="onAddAdminUser()" style="background-color: #3983fe; height:50px; width:200px;">ADD ADMIN</button>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date of Birth</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Mobile No</th>
+            <th class="actions">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let admin of admins | filter:searchtext; trackBy: trackById">
+            <td>{{ admin.id }}</td>
+            <td>{{ admin.name }}</td>
+            <td>{{ admin.dob }}</td>
+            <td>{{ admin.emailId }}</td>
+            <td>{{ admin.address }}</td>
+            <td>{{ admin.phone }}</td>
+            <td class="actions">
+              <button class="edit-button" (click)="onEdit(admin.id)">Edit</button>
+
+
+
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="footer-section"></div>
+</div>

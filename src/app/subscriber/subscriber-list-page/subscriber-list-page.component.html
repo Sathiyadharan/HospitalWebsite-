@@ -1,0 +1,71 @@
+<div class="container">
+    <div class="header-section" style="background-color: #3983fe;">
+      <div class="title">Patients List</div>
+    </div>
+  
+    <div class="body-section">
+      <div class="search-section">
+        <div class="left-side-search-section">
+          <div class="emailId-search">
+            <mat-form-field class="mat-emailId-search">
+              <mat-label style="color: black;">Search</mat-label>
+              <input matInput   [(ngModel)]="searchtext" placeholder="Type here" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div style="padding-right: 150px;">
+          <img src="./assets/images/corona.webp" alt="" style="height:150px; width: 200px;">
+          <hr style="color: #3983fe; size: 19px;">
+        </div>
+        <div class="right-side-search-section">
+          <button mat-raised-button color="primary" (click)="onAddAdminUser()"  style="width: 200px; height:50px; background-color: #3983fe ;">Add Patients Details</button>
+  
+        </div>
+      </div>
+  
+      <div class="content-section">
+          <table>
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Name</th>
+                      <th>age</th>
+                      <th>email</th>
+                      <th>address</th>
+                      <th>mobile</th>
+                      <th>Book Appointment</th>
+                   
+                      <th class="actions">Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let patient of patients  | filter:searchtext; trackBy: trackById">
+
+
+
+                  <td>{{ patient.id }}</td>
+                  <td>{{ patient.name }}</td>
+                  <td>{{ patient.dob }}</td>
+
+                  <td>{{ patient.emailId }}</td>
+                  <td>{{ patient.address }}</td>
+                  <td>{{ patient.phone }}</td>
+                  
+                  <td class="actions">
+                    <button (click)="onEditpatient(patient.id)">Book</button>
+                  </td>
+                  <td class="actions">
+                    <button  (click)="oneditpatient(patient.id)">Edit</button>
+                  </td>
+              </tr>
+                  
+            
+                  
+              </tbody>
+          </table>
+      </div>
+    </div>
+  
+    <div class="footer-section"></div>
+  </div>
+  

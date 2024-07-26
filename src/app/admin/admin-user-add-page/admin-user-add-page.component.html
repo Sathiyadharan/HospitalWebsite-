@@ -1,0 +1,90 @@
+<body class="body">
+  
+    <div class="container">
+    
+     
+      <div class="wrapper">
+        <h2>Add Admin <a href="home/(home:admin-user-list-page)" style="margin-left: 250px; text-decoration: none;">Go Back⬅</a></h2>
+        <form action="#" name="form" #f="ngForm"  (ngSubmit)="f.form.valid && submit()">
+          <div class="input-box">
+              <label for="name">Name</label>
+            <input type="text" placeholder="Enter your name" required     name="name" [(ngModel)]="formData.name" class="form-control"  #name="ngModel"  [ngClass]="{'is-invalid':f.submitted && name.invalid , 'is-valid':f.submitted && name.valid}" >
+            <div class="invalid-feedback">
+              <div>Name is required</div>
+            </div>
+          </div>
+          <div class="input-box">
+            <label for="phone">Mobile Number</label>
+            <input type="text"
+                   id="phone"
+                   name="phone"
+                   placeholder="Enter the Mobile"
+                   required
+                   [(ngModel)]="formData.phone"
+                   class="form-control"
+                   #mobile="ngModel"
+                   [ngClass]="{'is-invalid': f.submitted && mobile.invalid, 'is-valid': f.submitted && mobile.valid}"
+                   pattern="^\d{10}$"
+                   maxlength="10">
+            <div class="invalid-feedback" *ngIf="f.submitted && mobile.invalid">
+              <div *ngIf="mobile.errors?.['required']">Mobile is required</div>
+              <div *ngIf="mobile.errors?.['pattern']">Mobile number must be exactly 10 digits</div>
+            </div>
+          </div>
+        
+          
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input type="text"
+                   id="email"
+                   name="emailId"
+                   placeholder="Enter your email"
+                   required
+                   [(ngModel)]="formData.emailId"
+                   class="form-control"
+                   #email="ngModel"
+                   [ngClass]="{'is-invalid': f.submitted && email.invalid, 'is-valid': f.submitted && email.valid}"
+                   pattern="^[a-zA-Z0-9._%+-]+@\.com$">
+            <div class="invalid-feedback" *ngIf="f.submitted && email.invalid">
+              <div *ngIf="email.errors?.['required']">Email is required</div>
+              <div *ngIf="email.errors?.['pattern']">Email must be in the format ani&#64;.com</div>
+            </div>
+          </div>
+
+         
+         
+      
+         
+          <div class="input-box">
+            <label for="email">Password</label>
+          <input type="password" placeholder="Enter your Password" required     name="password" [(ngModel)]="formData.password"  class="form-control"  #password="ngModel"  [ngClass]="{'is-invalid':f.submitted && password.invalid , 'is-valid':f.submitted && password.valid}">
+          <div class="invalid-feedback">
+            <div>Password is required</div>
+          </div>
+        </div>
+      
+
+          <div class="input-box">
+              <label for="date">Date of Birth</label>
+            <input type="text" placeholder="Enter the Date" required      name="dob" [(ngModel)]="formData.dob"  class="form-control"  #dob="ngModel"  [ngClass]="{'is-invalid':f.submitted && dob.invalid , 'is-valid':f.submitted && dob.valid}">
+            <div class="invalid-feedback">
+              <div>Date of Birth is required</div>
+            </div>
+          </div>
+          <div class="input-box">
+              <label for="Confirm">Address</label>
+            <input type="text" placeholder="Enter the Address" required    name="address" [(ngModel)]="formData.address"  class="form-control"  #address="ngModel"  [ngClass]="{'is-invalid':f.submitted && address.invalid , 'is-valid':f.submitted && address.valid}">
+            <div class="invalid-feedback">
+              <div>Address is required</div>
+            </div>
+          </div>
+          
+          <div class="input-box button"  >
+            <input type="Submit" value="Add New Admin" (click)="createAdmin()">
+          </div>
+            
+        </form>
+        
+      </div>
+    </div>
+    </body>

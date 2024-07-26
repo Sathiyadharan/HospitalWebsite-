@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="header-section" style="background-color: #3983fe;">
+      <div class="title">Booked Appointments</div>
+    </div>
+  
+    <div class="body-section">
+      <div class="search-section">
+        <div class="left-side-search-section">
+          <div class="emailId-search">
+            <mat-form-field class="mat-emailId-search">
+              <mat-label style="color: black;">EmailId</mat-label>
+              <input matInput placeholder="Ex. John@email.com" />
+            </mat-form-field>
+          </div>
+  
+          <div class="mobilenr-search">
+            <mat-form-field class="mat-mobilenr-search">
+              <mat-label style="color: black;">Mobile Number</mat-label>
+              <input matInput placeholder="Ex. 234724209" />
+            </mat-form-field>
+          </div>
+        </div>
+        <div style="margin-right: 300px;">
+          <img src="./assets/images/book.png" alt="" style="height:80px; width: 80px; ">
+          <hr style="color: #3983fe; size: 19px;">
+
+        </div>
+       
+        <div class="right-side-search-section">
+          <button mat-raised-button color="primary" (click)="onAddAdminUser()" style="background-color: #3983fe; height:50px; width:200px;" >BOOK APPOINTMENT</button>
+  
+        </div>
+      </div>
+  
+      <div class="content-section">
+          <table>
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Doctor Name</th>
+                      <th>Patient Name</th>
+                      <th>Age</th>
+                      <th>Mobile No</th>
+                      <th>Apppointment Date</th>
+                      <th>Timings</th>
+                      <th>Reason</th>
+                      <th class="actions">Actions</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  
+                  @for (user of users; track user.id ) {
+                      <tr>
+                          <td>1</td>
+                          <td>Saaminadan</td>
+                          <td>Sasidharan</td>
+                          <td>21</td>
+                          <td>1234567890</td>
+                          <td>1990-01-01</td>
+                          <td>4.30pm</td>
+                          <td>Chest pain</td>
+                          <td class="actions">                            
+                              <button (click)="onEditAdminUser(user.id)">Edit</button>
+                          </td>
+                      </tr>
+              
+        } 
+                  
+              </tbody>
+          </table>
+      </div>
+    </div>
+  
+    <div class="footer-section"></div>
+  </div>
+  

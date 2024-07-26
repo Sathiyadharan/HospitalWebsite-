@@ -1,0 +1,100 @@
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: 400px;
+  }
+  
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-section .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .header-section .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .header-section .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .body-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .search-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .side-search-section {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+  }
+  
+  .side-search-section .name,
+  .side-search-section .DOB,
+  .side-search-section .address,
+  .side-search-section .emailId,
+  .side-search-section .phone {
+    margin-bottom: 15px;
+  }
+  
+  .side-search-section label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .side-search-section input[type="text"],
+  .side-search-section input[type="date"],
+  .side-search-section input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .content-section {
+    text-align: center;
+  }
+  
+  .create-btn {
+    padding: 10px 20px;
+    background-color: #3983fe;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-btn:hover {
+    background-color: #218838;
+  }
+  .body{
+    background: #3983fe ;
+  }
+  .foot{
+    background:linear-gradient(57deg, #C0D6E8 50% , #3983fe 30%);
+  }
+  

@@ -1,0 +1,141 @@
+
+.contain {
+    box-sizing: border-box;
+    border:  1px solid white;
+    width: 100%;
+    height: 95vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-section {
+    flex:4;
+    box-sizing: border-box;
+    border:  1px solid white;
+    width: 100%; 
+    height:650px;
+    margin-top: 15px;
+  
+    background:linear-gradient(60deg, #C0D6E8 52% , #3983fe 30%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.nav-header-section {
+    flex:.5;
+    box-sizing: border-box;
+    border:  1px solid white;
+    padding-top: 25px;
+    
+
+ 
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+}
+
+.title{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-menu-section {
+    flex:9;
+    box-sizing: border-box;
+
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+    overflow-y: auto;
+}
+
+/* Target the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the track */
+}
+
+/* Handle (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:black; /* Color of the thumb on hover */
+}
+
+.menu-item {
+    background: #3983fe;
+    box-sizing: border-box;
+    // border:  1px solid lightgreen;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem;
+    margin:8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-item:hover {
+    background-color:#fffafa8f;
+    cursor: pointer;
+}
+
+
+.selected-menu {
+    background-color: #fffafa8f;
+ 
+}
+
+.menu-name {
+    color: white;
+   
+
+}
+.menu-name:hover{
+    color: #0E46A3;
+}
+
+
+
+.main-section {
+    flex:8;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    background-color:white;
+}
+.nav-menu-section b{
+    font-size: 18px;
+}
+.nav-menu-section .menu-name{
+    padding-left:15px;
+}

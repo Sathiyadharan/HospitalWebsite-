@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f7;
+}
+
+.header-section {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  padding: 2px;
+  background-color:#3983fe;
+  border-radius: 10px;
+}
+
+.header-section .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin: 20px;
+}
+
+body {
+  background: transparent center cover;
+}
+
+main.table {
+  margin-top: 25px;
+  width: 70vw;
+  height: 75vh;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  border-radius: 5px;
+}
+
+input:read-only {
+  background-color: #d3d3d3;
+  color:black;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+input.id,
+input.doctor,
+input.day,
+input.session,
+input.st-time,
+input.et-time {
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  color:black;
+  padding-left: 15px;
+  margin-bottom: 10px;
+}
+
+input.st-time,
+input.et-time {
+  background: #f7f7f7;
+  color: #333;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  
+}
+
+th {
+  background-color: #f1f1f1;
+  
+}
+
+.consultation-btn {
+  padding: 15px;
+  background-color:#3983fe;
+  border-radius: 20px;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  color: white;
+  width: 20%;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consultation-btn:hover {
+  background-color:#2d66c4;
+  color: white;
+}
+
+.table-container {
+  height: 75vh;
+  overflow: auto;
+}
+
+input.id-head,
+input.docId,
+input.docname,
+input.id-session,
+input.id-day,
+input.id-st,
+input.id-et {
+  margin-bottom: 20px;
+}
+
+input.id,
+input.doctor,
+input.day,
+input.session,
+input.st-time,
+input.et-time {
+  margin-bottom: 20px;
+}
+
+
+th{
+  background: #3983fe;
+  
+  
+
+}
+
+
+
