@@ -1,0 +1,1 @@
+this website is developed in the an Angular and typeorm and nestjs are used in the backend
